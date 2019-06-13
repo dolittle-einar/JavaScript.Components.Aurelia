@@ -1,10 +1,13 @@
 ---
   kind: Deployment
-  apiVersion: extensions/v1beta1
+  apiVersion: apps/v1
   metadata:
     name: aureliacomponentgallery
     namespace: websites
   spec:
+    selector:
+      matchLabels:
+        name: aureliacomponentgallery
     template:
       metadata:
         labels:
