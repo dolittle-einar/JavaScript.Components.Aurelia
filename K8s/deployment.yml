@@ -3,12 +3,11 @@
   apiVersion: extensions/v1beta1
   metadata:
     name: aureliacomponentgallery
-    namespace: dolittle
+    namespace: websites
   spec:
     template:
       metadata:
         labels:
-          app: aureliacomponentgallery
           name: aureliacomponentgallery
       spec:
         containers:
@@ -17,3 +16,8 @@
           imagePullPolicy: Always
           ports:
           - containerPort: 80
+            name: http
+          resources:
+            limits:
+              cpu: 250m
+              memory: 100Mi          

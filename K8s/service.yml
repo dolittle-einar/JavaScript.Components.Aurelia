@@ -3,15 +3,12 @@
   kind: Service
   metadata:
     name: aureliacomponentgallery
-    namespace: dolittle
-    labels:
-      app: aureliacomponentgallery
+    namespace: websites
   spec:
     ports:
     - port: 80
-      targetPort: 80
-      name: aureliacomponentgallery-port
-      protocol: TCP
+      targetPort: http
+      name: http
     selector:
       app: aureliacomponentgallery
       name: aureliacomponentgallery
